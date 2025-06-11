@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_css %}
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+{%endblock%}
+
+{% block title %} Province | index {%endblock%}
+{% block content %}
+<main>
+  <section>
+    <hr>
+    <h1>This is our province page</h1>
+    <hr>
+    <h5>We are rendering this page using <strong>base</strong> page</h5>
+  </section>
+
+  <section>
+    <div class="card-header">
+      <h3>{{province_name}}</h3>
+
+      <h5>{{ province_cm}}</h5>
+    </div>
+  </section>
+</main>
+{% endblock %}
+{% block custom_js %}
+<script src="{% static 'assets/js/script.js' %}"></script>
+{% endblock %}
