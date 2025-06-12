@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Countries(models.Model):
+class country(models.Model):
     country_name = models.CharField(max_length=200, null=False, blank=False)
     country_code = models.CharField(max_length=10, null=False, blank=False)
     continent = models.CharField(max_length=20, null=False, blank= False)

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<main>
+    <section>
+        <h1>Add Country</h1>
+        <form>
+            {{ form.as_table }}
+            <input type="submit" name="addcountry" value="Add Country">
+        </form>
+    </section>
+</main>
+{%endblock%}
