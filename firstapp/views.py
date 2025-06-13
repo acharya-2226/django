@@ -32,6 +32,14 @@ def add_country(request):
         "form" : add_country_form,
         "title" : "country | Add Page"
     }
+    if request.method == "POST":
+        request_data = {
+            "name" : request.POST.get("country_name"),
+            "code" : request.POST.get("code"),
+            "continent" :request.POST.get("continent"),
+        }
+        context.setdefault("new_data", request_data)
+        return render(request, "add_country.html", context)
     return render(request, "add_country.html", context)
 
 def add_province(request):

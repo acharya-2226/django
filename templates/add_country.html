@@ -8,10 +8,18 @@
 <main>
     <section>
         <h1>Add Country</h1>
-        <form>
+        <form method="POST">
+            {% csrf_token %}
             {{ form.as_table }}
             <input type="submit" name="addcountry" value="Add Country">
         </form>
+
+
+        {% if new_data %}
+        Name : {{ new_data.name }}<br><hr>
+        Code : {{ new_data.code }}<br><hr>
+        Continent : {{ new_data.continent}}<br><hr>
+        {% endif %}
     </section>
 </main>
 {%endblock%}
